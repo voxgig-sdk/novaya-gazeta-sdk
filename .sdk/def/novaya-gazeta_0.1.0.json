@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Novaya Gazeta API",
+    "description": "This API provides news, analytics, expert opinions, special reports, and journalistic investigations related to Russia, Ukraine, and Europe from novayagazeta.eu and novayagazeta.ru. It allows users to access various media content and updates in real-time.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/novayagazeta"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://novayagazeta.eu/api/v1",
+      "description": "Novaya Gazeta EU API Server"
+    },
+    {
+      "url": "https://novayagazeta.ru/api/v1",
+      "description": "Novaya Gazeta RU API Server"
+    }
+  ],
+  "paths": {
+    "/get/themes": {
+      "get": {
+        "summary": "Get themes list",
+        "description": "Retrieves a list of themes/topics from Novaya Gazeta",
+        "operationId": "getThemesList",
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved themes list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Theme identifier"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "Theme name"
+                      },
+                      "slug": {
+                        "type": "string",
+                        "description": "URL slug for the theme"
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "Theme description"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "tags": [
+          "Themes"
+        ]
+      }
+    },
+    "/get/slugs": {
+      "get": {
+        "summary": "Get articles by slugs",
+        "description": "Retrieves articles based on provided slug identifiers",
+        "operationId": "getSlugsList",
+        "parameters": [
+          {
+            "name": "eu",
+            "in": "query",
+            "description": "Whether to use novayagazeta.eu (true) or novayagazeta.ru (false)",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "slugs",
+            "in": "query",
+            "description": "Array of article slugs to retrieve (e.g., 2026/04/24/daleko-idushchie-vyvody-nalichnykh)",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved articles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "slug": {
+                        "type": "string",
+                        "description": "Article slug"
+                      },
+                      "title": {
+                        "type": "string",
+                        "description": "Article title"
+                      },
+                      "content": {
+                        "type": "string",
+                        "description": "Article content"
+                      },
+                      "author": {
+                        "type": "string",
+                        "description": "Article author"
+                      },
+                      "publishedDate": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Publication date"
+                      },
+                      "category": {
+                        "type": "string",
+                        "description": "Article category"
+                      },
+                      "tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Article tags"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - invalid slug format"
+          },
+          "404": {
+            "description": "Articles not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "tags": [
+          "Articles"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Themes",
+      "description": "Operations related to news themes and topics"
+    },
+    {
+      "name": "Articles",
+      "description": "Operations related to news articles and content"
+    }
+  ]
+}

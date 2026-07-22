@@ -1,0 +1,29 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/novayagazeta"
+      }
+      description: "This API provides news, analytics, expert opinions, special reports, and journalistic investigations related to Russia, Ukraine, and Europe from novayagazeta.eu and novayagazeta.ru. It allows users to access various media content and updates in real-time."
+      servers: [
+        {
+          description: "Novaya Gazeta EU API Server"
+          url: "https://novayagazeta.eu/api/v1"
+        }
+        {
+          description: "Novaya Gazeta RU API Server"
+          url: "https://novayagazeta.ru/api/v1"
+        }
+      ]
+      summary: "This API provides news, analytics, expert opinions, special reports, and journalistic investigations related to Russia, Ukraine, and Europe from novayagazeta.eu and novayagazeta.ru."
+      title: "Novaya Gazeta API"
+      version: "1.0.0"
+      website: "https://novayagazeta.eu"
+    }
+  }
+}
+

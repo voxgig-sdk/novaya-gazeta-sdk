@@ -1,0 +1,22 @@
+# BasicThemeFlow
+
+main: kit: flow: BasicThemeFlow:
+{
+  entity: "theme",
+  kind: "basic",
+  name: "BasicThemeFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "theme_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicThemeFlow"
+}
