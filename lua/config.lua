@@ -48,7 +48,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "published_date",
+            ["name"] = "publishedDate",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 3,
@@ -62,7 +62,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "tag",
+            ["name"] = "tags",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 5,
@@ -104,6 +104,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/get/slugs",
                 ["parts"] = {
@@ -170,6 +171,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/get/themes",
                 ["parts"] = {

@@ -264,9 +264,9 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"author"` |  |
 | `"category"` |  |
 | `"content"` |  |
-| `"published_date"` |  |
+| `"publishedDate"` |  |
 | `"slug"` |  |
-| `"tag"` |  |
+| `"tags"` |  |
 | `"title"` |  |
 
 Operations: List.
@@ -308,9 +308,9 @@ Create an instance: `article := client.Article(nil)`
 | `author` | `string` |  |
 | `category` | `string` |  |
 | `content` | `string` |  |
-| `published_date` | `string` |  |
+| `publishedDate` | `string` |  |
 | `slug` | `string` |  |
-| `tag` | `[]any` |  |
+| `tags` | `[]any` |  |
 | `title` | `string` |  |
 
 #### Example: List

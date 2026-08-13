@@ -97,9 +97,9 @@ local article = client:Article(nil)
 | `author` | `string` | No |  |
 | `category` | `string` | No |  |
 | `content` | `string` | No |  |
-| `published_date` | `string` | No |  |
+| `publishedDate` | `string` | No |  |
 | `slug` | `string` | No |  |
-| `tag` | `table` | No |  |
+| `tags` | `table` | No |  |
 | `title` | `string` | No |  |
 
 ### Operations

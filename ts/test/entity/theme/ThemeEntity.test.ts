@@ -26,8 +26,8 @@ import {
 describe('ThemeEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when NOVAYAGAZETA_TEST_LIVE=TRUE.
-  afterEach(liveDelay('NOVAYAGAZETA_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when NOVAYA_GAZETA_TEST_LIVE=TRUE.
+  afterEach(liveDelay('NOVAYA_GAZETA_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = NovayaGazetaSDK.test()
@@ -63,7 +63,7 @@ describe('ThemeEntity', async () => {
     const theme_ref01_ent = client.Theme()
     const theme_ref01_match: any = {}
 
-    const theme_ref01_list = await theme_ref01_ent.list(theme_ref01_match)
+    const theme_ref01_list = (await theme_ref01_ent.list(theme_ref01_match)).map((e: any) => e.data())
 
 
   })

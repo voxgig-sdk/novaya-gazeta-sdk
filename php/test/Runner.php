@@ -43,8 +43,8 @@ class NovayaGazetaTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('NOVAYAGAZETA_TEST_LIVE');
-        $override = self::getenv('NOVAYAGAZETA_TEST_OVERRIDE');
+        $live = self::getenv('NOVAYA_GAZETA_TEST_LIVE');
+        $override = self::getenv('NOVAYA_GAZETA_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class NovayaGazetaTestRunner
             }
         }
 
-        $explain = self::getenv('NOVAYAGAZETA_TEST_EXPLAIN');
+        $explain = self::getenv('NOVAYA_GAZETA_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['NOVAYAGAZETA_TEST_EXPLAIN'] = $explain;
+            $m['NOVAYA_GAZETA_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

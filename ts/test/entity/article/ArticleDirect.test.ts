@@ -19,11 +19,15 @@ import {
 describe('ArticleDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when NOVAYAGAZETA_TEST_LIVE=TRUE.
-  afterEach(liveDelay('NOVAYAGAZETA_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when NOVAYA_GAZETA_TEST_LIVE=TRUE.
+  afterEach(liveDelay('NOVAYA_GAZETA_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new NovayaGazetaSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -77,17 +81,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'NOVAYAGAZETA_TEST_ARTICLE_ENTID': {},
-    'NOVAYAGAZETA_TEST_LIVE': 'FALSE',
+    'NOVAYA_GAZETA_TEST_ARTICLE_ENTID': {},
+    'NOVAYA_GAZETA_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.NOVAYAGAZETA_TEST_LIVE
+  const live = 'TRUE' === env.NOVAYA_GAZETA_TEST_LIVE
 
   if (live) {
     const client = new NovayaGazetaSDK({
     })
 
-    let idmap: any = env['NOVAYAGAZETA_TEST_ARTICLE_ENTID']
+    let idmap: any = env['NOVAYA_GAZETA_TEST_ARTICLE_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

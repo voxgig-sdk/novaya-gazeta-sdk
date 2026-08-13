@@ -10,18 +10,18 @@
 ---@field author? string
 ---@field category? string
 ---@field content? string
----@field published_date? string
+---@field publishedDate? string
 ---@field slug? string
----@field tag? table
+---@field tags? table
 ---@field title? string
 
 ---@class ArticleListMatch
 ---@field author? string
 ---@field category? string
 ---@field content? string
----@field published_date? string
+---@field publishedDate? string
 ---@field slug? string
----@field tag? table
+---@field tags? table
 ---@field title? string
 
 ---@class Theme

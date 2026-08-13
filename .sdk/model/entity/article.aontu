@@ -21,7 +21,7 @@ main: kit: entity: article: {
       type: "`$STRING`"
     }
     {
-      name: "published_date"
+      name: "publishedDate"
       req: false
       type: "`$STRING`"
     }
@@ -31,7 +31,7 @@ main: kit: entity: article: {
       type: "`$STRING`"
     }
     {
-      name: "tag"
+      name: "tags"
       req: false
       type: "`$ARRAY`"
     }

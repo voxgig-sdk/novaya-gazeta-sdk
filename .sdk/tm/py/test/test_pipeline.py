@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import NovayaGazetaSDK
-from core.error import NovayaGazetaError
-from core.result import NovayaGazetaResult
-from core.response import NovayaGazetaResponse
-from core.spec import NovayaGazetaSpec
-from feature.base_feature import NovayaGazetaBaseFeature
+from projectname_sdk.core.error import NovayaGazetaError
+from projectname_sdk.core.result import NovayaGazetaResult
+from projectname_sdk.core.response import NovayaGazetaResponse
+from projectname_sdk.core.spec import NovayaGazetaSpec
+from projectname_sdk.feature.base_feature import NovayaGazetaBaseFeature
 
 
 def _client():

@@ -124,7 +124,8 @@ Create a mock client for unit testing — no server required:
 ```python
 client = NovayaGazetaSDK.test()
 
-# Entity ops return the bare record and raise on error.
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
 article = client.Article().list()
 # article contains the mock response record
 ```
@@ -221,7 +222,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -246,9 +247,9 @@ On error, `ok` is `False` and `err` contains the error value.
 | `author` |  |
 | `category` |  |
 | `content` |  |
-| `published_date` |  |
+| `publishedDate` |  |
 | `slug` |  |
-| `tag` |  |
+| `tags` |  |
 | `title` |  |
 
 Operations: List.
@@ -290,9 +291,9 @@ Create an instance: `article = client.Article()`
 | `author` | `str` |  |
 | `category` | `str` |  |
 | `content` | `str` |  |
-| `published_date` | `str` |  |
+| `publishedDate` | `str` |  |
 | `slug` | `str` |  |
-| `tag` | `list` |  |
+| `tags` | `list` |  |
 | `title` | `str` |  |
 
 #### Example: List

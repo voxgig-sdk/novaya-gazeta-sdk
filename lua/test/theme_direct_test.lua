@@ -61,11 +61,11 @@ function theme_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["NOVAYAGAZETA_TEST_THEME_ENTID"] = {},
-    ["NOVAYAGAZETA_TEST_LIVE"] = "FALSE",
+    ["NOVAYA_GAZETA_TEST_THEME_ENTID"] = {},
+    ["NOVAYA_GAZETA_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["NOVAYAGAZETA_TEST_LIVE"] == "TRUE"
+  local live = env["NOVAYA_GAZETA_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

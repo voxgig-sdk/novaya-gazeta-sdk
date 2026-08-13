@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from novayagazeta_sdk.utility.voxgig_struct import voxgig_struct as vs
 from novayagazeta_sdk import NovayaGazetaSDK
-from core import helpers
+from novayagazeta_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _theme_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "NOVAYAGAZETA_TEST_THEME_ENTID": {},
-        "NOVAYAGAZETA_TEST_LIVE": "FALSE",
+        "NOVAYA_GAZETA_TEST_THEME_ENTID": {},
+        "NOVAYA_GAZETA_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("NOVAYAGAZETA_TEST_LIVE") == "TRUE"
+    live = env.get("NOVAYA_GAZETA_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

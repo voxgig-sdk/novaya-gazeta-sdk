@@ -105,9 +105,9 @@ fmt.Println(article.GetName()) // "article"
 | `author` | `string` | No |  |
 | `category` | `string` | No |  |
 | `content` | `string` | No |  |
-| `published_date` | `string` | No |  |
+| `publishedDate` | `string` | No |  |
 | `slug` | `string` | No |  |
-| `tag` | `[]any` | No |  |
+| `tags` | `[]any` | No |  |
 | `title` | `string` | No |  |
 
 ### Operations

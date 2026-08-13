@@ -94,9 +94,9 @@ article = client.Article()
 | `author` | `str` | No |  |
 | `category` | `str` | No |  |
 | `content` | `str` | No |  |
-| `published_date` | `str` | No |  |
+| `publishedDate` | `str` | No |  |
 | `slug` | `str` | No |  |
-| `tag` | `list` | No |  |
+| `tags` | `list` | No |  |
 | `title` | `str` | No |  |
 
 ### Operations

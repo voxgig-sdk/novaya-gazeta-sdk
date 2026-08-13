@@ -99,9 +99,9 @@ $article = $client->Article();
 | `author` | `string` | No |  |
 | `category` | `string` | No |  |
 | `content` | `string` | No |  |
-| `published_date` | `string` | No |  |
+| `publishedDate` | `string` | No |  |
 | `slug` | `string` | No |  |
-| `tag` | `array` | No |  |
+| `tags` | `array` | No |  |
 | `title` | `string` | No |  |
 
 ### Operations

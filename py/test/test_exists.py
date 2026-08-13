@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# NovayaGazeta SDK exists test
 
 import pytest
 from novayagazeta_sdk import NovayaGazetaSDK

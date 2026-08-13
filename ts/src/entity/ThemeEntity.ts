@@ -37,7 +37,7 @@ class ThemeEntity extends NovayaGazetaEntityBase<Theme> {
 
 
 
-  async list(this: any, reqmatch?: ThemeListMatch, ctrl?: Control): Promise<Theme[]> {
+  async list(this: any, reqmatch?: ThemeListMatch, ctrl?: Control): Promise<ThemeEntity[]> {
 
     const utility = this._utility
 

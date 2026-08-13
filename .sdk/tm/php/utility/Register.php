@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ NovayaGazetaUtility::setRegistrar(function (NovayaGazetaUtility $u): void {
     $u->prepare_params = [NovayaGazetaPrepareParams::class, 'call'];
     $u->prepare_path = [NovayaGazetaPreparePath::class, 'call'];
     $u->prepare_query = [NovayaGazetaPrepareQuery::class, 'call'];
+    $u->graphql_body = [NovayaGazetaGraphql::class, 'body'];
+    $u->graphql_errors = [NovayaGazetaGraphql::class, 'errors'];
     $u->result_basic = [NovayaGazetaResultBasic::class, 'call'];
     $u->result_body = [NovayaGazetaResultBody::class, 'call'];
     $u->result_headers = [NovayaGazetaResultHeaders::class, 'call'];

@@ -23,8 +23,8 @@ module NovayaGazetaTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("NOVAYAGAZETA_TEST_LIVE")
-    override = getenv("NOVAYAGAZETA_TEST_OVERRIDE")
+    live = getenv("NOVAYA_GAZETA_TEST_LIVE")
+    override = getenv("NOVAYA_GAZETA_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module NovayaGazetaTestRunner
       end
     end
 
-    explain = getenv("NOVAYAGAZETA_TEST_EXPLAIN")
-    m["NOVAYAGAZETA_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("NOVAYA_GAZETA_TEST_EXPLAIN")
+    m["NOVAYA_GAZETA_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

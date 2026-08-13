@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'NovayaGazeta',
   }
 
 
@@ -80,7 +80,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "published_date",
+          "name": "publishedDate",
           "req": false,
           "type": "`$STRING`",
           "index$": 3
@@ -94,7 +94,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "tag",
+          "name": "tags",
           "req": false,
           "type": "`$ARRAY`",
           "index$": 5
@@ -136,6 +136,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/get/slugs",
               "parts": [
@@ -202,6 +203,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/get/themes",
               "parts": [

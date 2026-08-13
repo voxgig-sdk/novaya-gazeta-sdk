@@ -119,7 +119,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = NovayaGazetaSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 article = client.Article.list()
 puts article
 ```
@@ -240,9 +241,9 @@ returns a result `Hash` with these keys:
 | `author` |  |
 | `category` |  |
 | `content` |  |
-| `published_date` |  |
+| `publishedDate` |  |
 | `slug` |  |
-| `tag` |  |
+| `tags` |  |
 | `title` |  |
 
 Operations: List.
@@ -284,9 +285,9 @@ Create an instance: `article = client.Article`
 | `author` | `String` |  |
 | `category` | `String` |  |
 | `content` | `String` |  |
-| `published_date` | `String` |  |
+| `publishedDate` | `String` |  |
 | `slug` | `String` |  |
-| `tag` | `Array` |  |
+| `tags` | `Array` |  |
 | `title` | `String` |  |
 
 #### Example: List

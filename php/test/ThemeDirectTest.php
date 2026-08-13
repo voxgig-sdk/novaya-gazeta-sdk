@@ -66,11 +66,11 @@ function theme_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "NOVAYAGAZETA_TEST_THEME_ENTID" => [],
-        "NOVAYAGAZETA_TEST_LIVE" => "FALSE",
+        "NOVAYA_GAZETA_TEST_THEME_ENTID" => [],
+        "NOVAYA_GAZETA_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["NOVAYAGAZETA_TEST_LIVE"] === "TRUE";
+    $live = $env["NOVAYA_GAZETA_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

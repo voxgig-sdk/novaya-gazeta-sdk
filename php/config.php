@@ -54,7 +54,7 @@ class NovayaGazetaConfig
             ],
             [
               'active' => true,
-              'name' => 'published_date',
+              'name' => 'publishedDate',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 3,
@@ -68,7 +68,7 @@ class NovayaGazetaConfig
             ],
             [
               'active' => true,
-              'name' => 'tag',
+              'name' => 'tags',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 5,
@@ -110,6 +110,7 @@ class NovayaGazetaConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/get/slugs',
                   'parts' => [
@@ -176,6 +177,7 @@ class NovayaGazetaConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/get/themes',
                   'parts' => [

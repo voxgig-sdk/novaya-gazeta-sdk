@@ -35,7 +35,9 @@ const client = new NovayaGazetaSDK()
 
 ### 2. List article records
 
-`list()` resolves to an array of Article objects — iterate it directly:
+`list()` resolves to an array of Article ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const articles = await client.Article().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = NovayaGazetaSDK.test()
 
 const article = await client.Article().list()
-// article is a bare entity populated with mock response data
+// article is the entity, populated with mock response data
+// — call article.data() for the record itself
 console.log(article)
 ```
 
@@ -288,9 +291,9 @@ The `prepare()` method returns:
 | `author` |  |
 | `category` |  |
 | `content` |  |
-| `published_date` |  |
+| `publishedDate` |  |
 | `slug` |  |
-| `tag` |  |
+| `tags` |  |
 | `title` |  |
 
 Operations: list.
@@ -332,9 +335,9 @@ Create an instance: `const article = client.Article()`
 | `author` | `string` |  |
 | `category` | `string` |  |
 | `content` | `string` |  |
-| `published_date` | `string` |  |
+| `publishedDate` | `string` |  |
 | `slug` | `string` |  |
-| `tag` | `any[]` |  |
+| `tags` | `any[]` |  |
 | `title` | `string` |  |
 
 #### Example: List

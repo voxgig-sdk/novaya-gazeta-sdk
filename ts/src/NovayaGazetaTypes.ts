@@ -9,9 +9,9 @@ export interface Article {
   author?: string
   category?: string
   content?: string
-  published_date?: string
+  publishedDate?: string
   slug?: string
-  tag?: any[]
+  tags?: any[]
   title?: string
 }
 
@@ -19,9 +19,9 @@ export interface ArticleListMatch {
   author?: string
   category?: string
   content?: string
-  published_date?: string
+  publishedDate?: string
   slug?: string
-  tag?: any[]
+  tags?: any[]
   title?: string
 }
 

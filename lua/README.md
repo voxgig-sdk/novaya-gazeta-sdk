@@ -219,9 +219,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local article, err = client:Article():load()
+    local article, err = client:Article():list()
     if err then error(err) end
-    -- article is the loaded record
+    -- article is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -235,9 +235,9 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | `author` |  |
 | `category` |  |
 | `content` |  |
-| `published_date` |  |
+| `publishedDate` |  |
 | `slug` |  |
-| `tag` |  |
+| `tags` |  |
 | `title` |  |
 
 Operations: List.
@@ -279,9 +279,9 @@ Create an instance: `local article = client:Article(nil)`
 | `author` | `string` |  |
 | `category` | `string` |  |
 | `content` | `string` |  |
-| `published_date` | `string` |  |
+| `publishedDate` | `string` |  |
 | `slug` | `string` |  |
-| `tag` | `table` |  |
+| `tags` | `table` |  |
 | `title` | `string` |  |
 
 #### Example: List

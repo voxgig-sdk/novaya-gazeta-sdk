@@ -100,9 +100,9 @@ article = client.Article
 | `author` | `String` | No |  |
 | `category` | `String` | No |  |
 | `content` | `String` | No |  |
-| `published_date` | `String` | No |  |
+| `publishedDate` | `String` | No |  |
 | `slug` | `String` | No |  |
-| `tag` | `Array` | No |  |
+| `tags` | `Array` | No |  |
 | `title` | `String` | No |  |
 
 ### Operations

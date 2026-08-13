@@ -18,9 +18,9 @@ class Article
     public ?string $author = null;
     public ?string $category = null;
     public ?string $content = null;
-    public ?string $published_date = null;
+    public ?string $publishedDate = null;
     public ?string $slug = null;
-    public ?array $tag = null;
+    public ?array $tags = null;
     public ?string $title = null;
 }
 
@@ -30,9 +30,9 @@ class ArticleListMatch
     public ?string $author = null;
     public ?string $category = null;
     public ?string $content = null;
-    public ?string $published_date = null;
+    public ?string $publishedDate = null;
     public ?string $slug = null;
-    public ?array $tag = null;
+    public ?array $tags = null;
     public ?string $title = null;
 }
 

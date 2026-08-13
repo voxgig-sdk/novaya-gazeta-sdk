@@ -19,13 +19,13 @@
 # @!attribute [rw] content
 #   @return [String, nil]
 #
-# @!attribute [rw] published_date
+# @!attribute [rw] publishedDate
 #   @return [String, nil]
 #
 # @!attribute [rw] slug
 #   @return [String, nil]
 #
-# @!attribute [rw] tag
+# @!attribute [rw] tags
 #   @return [Array, nil]
 #
 # @!attribute [rw] title
@@ -34,9 +34,9 @@ Article = Struct.new(
   :author,
   :category,
   :content,
-  :published_date,
+  :publishedDate,
   :slug,
-  :tag,
+  :tags,
   :title,
   keyword_init: true
 )
@@ -52,13 +52,13 @@ Article = Struct.new(
 # @!attribute [rw] content
 #   @return [String, nil]
 #
-# @!attribute [rw] published_date
+# @!attribute [rw] publishedDate
 #   @return [String, nil]
 #
 # @!attribute [rw] slug
 #   @return [String, nil]
 #
-# @!attribute [rw] tag
+# @!attribute [rw] tags
 #   @return [Array, nil]
 #
 # @!attribute [rw] title
@@ -67,9 +67,9 @@ ArticleListMatch = Struct.new(
   :author,
   :category,
   :content,
-  :published_date,
+  :publishedDate,
   :slug,
-  :tag,
+  :tags,
   :title,
   keyword_init: true
 )

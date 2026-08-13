@@ -5,27 +5,27 @@
         "author": "s46",
         "category": "s47",
         "content": "s48",
-        "published_date": "s49",
+        "publishedDate": "s49",
         "slug": "s4a",
-        "tag": [],
+        "tags": [],
         "title": "s4c"
       },
       "ARTICLE01": {
         "author": "s8c",
         "category": "s8d",
         "content": "s8e",
-        "published_date": "s8f",
+        "publishedDate": "s8f",
         "slug": "s90",
-        "tag": [],
+        "tags": [],
         "title": "s92"
       },
       "ARTICLE02": {
         "author": "sd2",
         "category": "sd3",
         "content": "sd4",
-        "published_date": "sd5",
+        "publishedDate": "sd5",
         "slug": "sd6",
-        "tag": [],
+        "tags": [],
         "title": "sd8"
       }
     }
@@ -36,9 +36,9 @@
         "author": "s118",
         "category": "s119",
         "content": "s11a",
-        "published_date": "s11b",
+        "publishedDate": "s11b",
         "slug": "s11c",
-        "tag": [],
+        "tags": [],
         "title": "s11e"
       }
     }
