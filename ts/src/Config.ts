@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://novayagazeta.eu/api/v1',
+    base: "https://novayagazeta.eu/api/v1",
 
     headers: {
       "content-type": "application/json"
@@ -58,53 +58,32 @@ class Config {
     "article": {
       "fields": [
         {
-          "active": true,
           "name": "author",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "category",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "content",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 2
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "publishedDate",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 3
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "slug",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 4
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "tags",
-          "req": false,
-          "type": "`$ARRAY`",
-          "index$": 5
+          "type": "`$ARRAY`"
         },
         {
-          "active": true,
           "name": "title",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 6
+          "type": "`$STRING`"
         }
       ],
       "name": "article",
@@ -114,20 +93,16 @@ class Config {
           "name": "list",
           "points": [
             {
-              "active": true,
               "args": {
                 "query": [
                   {
-                    "active": true,
                     "example": false,
                     "kind": "query",
                     "name": "eu",
                     "orig": "eu",
-                    "reqd": false,
                     "type": "`$BOOLEAN`"
                   },
                   {
-                    "active": true,
                     "kind": "query",
                     "name": "slug",
                     "orig": "slug",
@@ -152,11 +127,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "list"
+          ]
         }
       },
       "relations": {
@@ -166,32 +139,20 @@ class Config {
     "theme": {
       "fields": [
         {
-          "active": true,
           "name": "description",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "id",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "name",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 2
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "slug",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 3
+          "type": "`$STRING`"
         }
       ],
       "name": "theme",
@@ -201,7 +162,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -214,11 +174,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "list"
+          ]
         }
       },
       "relations": {

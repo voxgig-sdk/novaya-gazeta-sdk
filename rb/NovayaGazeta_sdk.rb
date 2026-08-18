@@ -28,7 +28,7 @@ class NovayaGazetaSDK
     utility = NovayaGazetaUtility.new
     @_utility = utility
 
-    config = NovayaGazetaConfig.make_config
+    config = NovayaGazetaConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

@@ -40,7 +40,7 @@ class NovayaGazetaSDK
         $utility = new NovayaGazetaUtility();
         $this->_utility = $utility;
 
-        $config = NovayaGazetaConfig::make_config();
+        $config = NovayaGazetaConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

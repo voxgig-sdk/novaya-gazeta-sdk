@@ -1,6 +1,20 @@
 # NovayaGazeta SDK configuration
 
 module NovayaGazetaConfig
+  # Return the process-wide config, built once on first use. The SDK reads
+  # the config on every request and never writes to it, so one instance is
+  # shared by every client rather than rebuilt per client.
+  #
+  # The returned hash is shared: treat it as read-only. Callers that need to
+  # mutate should use make_config, which always returns a fresh copy.
+  def self.shared_config
+    @shared_config ||= make_config
+  end
+
+
+  # Build a fresh, fully materialised config hash. Every call rebuilds the
+  # whole structure, so prefer shared_config unless you need a private copy
+  # you intend to mutate.
   def self.make_config
     {
       "main" => {
@@ -27,53 +41,32 @@ module NovayaGazetaConfig
         "article" => {
           "fields" => [
             {
-              "active" => true,
               "name" => "author",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 0,
             },
             {
-              "active" => true,
               "name" => "category",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 1,
             },
             {
-              "active" => true,
               "name" => "content",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 2,
             },
             {
-              "active" => true,
               "name" => "publishedDate",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 3,
             },
             {
-              "active" => true,
               "name" => "slug",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 4,
             },
             {
-              "active" => true,
               "name" => "tags",
-              "req" => false,
               "type" => "`$ARRAY`",
-              "index$" => 5,
             },
             {
-              "active" => true,
               "name" => "title",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 6,
             },
           ],
           "name" => "article",
@@ -83,20 +76,16 @@ module NovayaGazetaConfig
               "name" => "list",
               "points" => [
                 {
-                  "active" => true,
                   "args" => {
                     "query" => [
                       {
-                        "active" => true,
                         "example" => false,
                         "kind" => "query",
                         "name" => "eu",
                         "orig" => "eu",
-                        "reqd" => false,
                         "type" => "`$BOOLEAN`",
                       },
                       {
-                        "active" => true,
                         "kind" => "query",
                         "name" => "slug",
                         "orig" => "slug",
@@ -122,10 +111,8 @@ module NovayaGazetaConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
-                  "index$" => 0,
                 },
               ],
-              "key$" => "list",
             },
           },
           "relations" => {
@@ -135,32 +122,20 @@ module NovayaGazetaConfig
         "theme" => {
           "fields" => [
             {
-              "active" => true,
               "name" => "description",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 0,
             },
             {
-              "active" => true,
               "name" => "id",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 1,
             },
             {
-              "active" => true,
               "name" => "name",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 2,
             },
             {
-              "active" => true,
               "name" => "slug",
-              "req" => false,
               "type" => "`$STRING`",
-              "index$" => 3,
             },
           ],
           "name" => "theme",
@@ -170,7 +145,6 @@ module NovayaGazetaConfig
               "name" => "list",
               "points" => [
                 {
-                  "active" => true,
                   "args" => {},
                   "kind" => "http",
                   "method" => "GET",
@@ -184,10 +158,8 @@ module NovayaGazetaConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
-                  "index$" => 0,
                 },
               ],
-              "key$" => "list",
             },
           },
           "relations" => {

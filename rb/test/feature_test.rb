@@ -15,7 +15,7 @@ require_relative "../NovayaGazeta_sdk"
 module NovayaGazetaFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = NovayaGazetaConfig.make_config["feature"]
+    f = NovayaGazetaConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

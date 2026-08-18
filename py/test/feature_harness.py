@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from novayagazeta_sdk.config import make_config
+from novayagazeta_sdk.config import shared_config
 from novayagazeta_sdk.features import _make_feature
 from novayagazeta_sdk.core.control import NovayaGazetaControl
 from novayagazeta_sdk.core.error import NovayaGazetaError
@@ -24,7 +24,7 @@ from novayagazeta_sdk.core.spec import NovayaGazetaSpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 
