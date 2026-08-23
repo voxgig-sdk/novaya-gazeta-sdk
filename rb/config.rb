@@ -19,6 +19,9 @@ module NovayaGazetaConfig
     {
       "main" => {
         "name" => "NovayaGazeta",
+        "slug" => "novaya-gazeta",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -42,30 +45,37 @@ module NovayaGazetaConfig
           "fields" => [
             {
               "name" => "author",
+              "short" => "Article author",
               "type" => "`$STRING`",
             },
             {
               "name" => "category",
+              "short" => "Article category",
               "type" => "`$STRING`",
             },
             {
               "name" => "content",
+              "short" => "Article content",
               "type" => "`$STRING`",
             },
             {
               "name" => "publishedDate",
+              "short" => "Publication date",
               "type" => "`$STRING`",
             },
             {
               "name" => "slug",
+              "short" => "Article slug",
               "type" => "`$STRING`",
             },
             {
               "name" => "tags",
+              "short" => "Article tags",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "title",
+              "short" => "Article title",
               "type" => "`$STRING`",
             },
           ],
@@ -123,18 +133,22 @@ module NovayaGazetaConfig
           "fields" => [
             {
               "name" => "description",
+              "short" => "Theme description",
               "type" => "`$STRING`",
             },
             {
               "name" => "id",
+              "short" => "Theme identifier",
               "type" => "`$STRING`",
             },
             {
               "name" => "name",
+              "short" => "Theme name",
               "type" => "`$STRING`",
             },
             {
               "name" => "slug",
+              "short" => "URL slug for the theme",
               "type" => "`$STRING`",
             },
           ],

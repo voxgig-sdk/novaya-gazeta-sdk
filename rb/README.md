@@ -238,13 +238,13 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `category` |  |
-| `content` |  |
-| `publishedDate` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
+| `author` | Article author |
+| `category` | Article category |
+| `content` | Article content |
+| `publishedDate` | Publication date |
+| `slug` | Article slug |
+| `tags` | Article tags |
+| `title` | Article title |
 
 Operations: List.
 
@@ -254,10 +254,10 @@ API path: `/get/slugs`
 
 | Field | Description |
 | --- | --- |
-| `description` |  |
-| `id` |  |
-| `name` |  |
-| `slug` |  |
+| `description` | Theme description |
+| `id` | Theme identifier |
+| `name` | Theme name |
+| `slug` | URL slug for the theme |
 
 Operations: List.
 
@@ -282,13 +282,13 @@ Create an instance: `article = client.Article`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `String` |  |
-| `category` | `String` |  |
-| `content` | `String` |  |
-| `publishedDate` | `String` |  |
-| `slug` | `String` |  |
-| `tags` | `Array` |  |
-| `title` | `String` |  |
+| `author` | `String` | Article author |
+| `category` | `String` | Article category |
+| `content` | `String` | Article content |
+| `publishedDate` | `String` | Publication date |
+| `slug` | `String` | Article slug |
+| `tags` | `Array` | Article tags |
+| `title` | `String` | Article title |
 
 #### Example: List
 
@@ -312,10 +312,10 @@ Create an instance: `theme = client.Theme`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `String` |  |
-| `id` | `String` |  |
-| `name` | `String` |  |
-| `slug` | `String` |  |
+| `description` | `String` | Theme description |
+| `id` | `String` | Theme identifier |
+| `name` | `String` | Theme name |
+| `slug` | `String` | URL slug for the theme |
 
 #### Example: List
 

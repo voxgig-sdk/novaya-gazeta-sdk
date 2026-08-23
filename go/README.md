@@ -6,7 +6,7 @@ The Golang SDK for the NovayaGazeta API — an entity-oriented client using stan
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Article(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -261,13 +261,13 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"author"` |  |
-| `"category"` |  |
-| `"content"` |  |
-| `"publishedDate"` |  |
-| `"slug"` |  |
-| `"tags"` |  |
-| `"title"` |  |
+| `"author"` | Article author |
+| `"category"` | Article category |
+| `"content"` | Article content |
+| `"publishedDate"` | Publication date |
+| `"slug"` | Article slug |
+| `"tags"` | Article tags |
+| `"title"` | Article title |
 
 Operations: List.
 
@@ -277,10 +277,10 @@ API path: `/get/slugs`
 
 | Field | Description |
 | --- | --- |
-| `"description"` |  |
-| `"id"` |  |
-| `"name"` |  |
-| `"slug"` |  |
+| `"description"` | Theme description |
+| `"id"` | Theme identifier |
+| `"name"` | Theme name |
+| `"slug"` | URL slug for the theme |
 
 Operations: List.
 
@@ -305,13 +305,13 @@ Create an instance: `article := client.Article(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `string` |  |
-| `category` | `string` |  |
-| `content` | `string` |  |
-| `publishedDate` | `string` |  |
-| `slug` | `string` |  |
-| `tags` | `[]any` |  |
-| `title` | `string` |  |
+| `author` | `string` | Article author |
+| `category` | `string` | Article category |
+| `content` | `string` | Article content |
+| `publishedDate` | `string` | Publication date |
+| `slug` | `string` | Article slug |
+| `tags` | `[]any` | Article tags |
+| `title` | `string` | Article title |
 
 #### Example: List
 
@@ -338,10 +338,10 @@ Create an instance: `theme := client.Theme(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `string` |  |
-| `id` | `string` |  |
-| `name` | `string` |  |
-| `slug` | `string` |  |
+| `description` | `string` | Theme description |
+| `id` | `string` | Theme identifier |
+| `name` | `string` | Theme name |
+| `slug` | `string` | URL slug for the theme |
 
 #### Example: List
 

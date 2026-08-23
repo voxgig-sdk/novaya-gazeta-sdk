@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -288,13 +288,13 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `category` |  |
-| `content` |  |
-| `publishedDate` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
+| `author` | Article author |
+| `category` | Article category |
+| `content` | Article content |
+| `publishedDate` | Publication date |
+| `slug` | Article slug |
+| `tags` | Article tags |
+| `title` | Article title |
 
 Operations: list.
 
@@ -304,10 +304,10 @@ API path: `/get/slugs`
 
 | Field | Description |
 | --- | --- |
-| `description` |  |
-| `id` |  |
-| `name` |  |
-| `slug` |  |
+| `description` | Theme description |
+| `id` | Theme identifier |
+| `name` | Theme name |
+| `slug` | URL slug for the theme |
 
 Operations: list.
 
@@ -332,13 +332,13 @@ Create an instance: `const article = client.Article()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `string` |  |
-| `category` | `string` |  |
-| `content` | `string` |  |
-| `publishedDate` | `string` |  |
-| `slug` | `string` |  |
-| `tags` | `any[]` |  |
-| `title` | `string` |  |
+| `author` | `string` | Article author |
+| `category` | `string` | Article category |
+| `content` | `string` | Article content |
+| `publishedDate` | `string` | Publication date |
+| `slug` | `string` | Article slug |
+| `tags` | `any[]` | Article tags |
+| `title` | `string` | Article title |
 
 #### Example: List
 
@@ -361,10 +361,10 @@ Create an instance: `const theme = client.Theme()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `string` |  |
-| `id` | `string` |  |
-| `name` | `string` |  |
-| `slug` | `string` |  |
+| `description` | `string` | Theme description |
+| `id` | `string` | Theme identifier |
+| `name` | `string` | Theme name |
+| `slug` | `string` | URL slug for the theme |
 
 #### Example: List
 

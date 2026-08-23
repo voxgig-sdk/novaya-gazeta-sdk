@@ -97,13 +97,13 @@ article = client.Article
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `author` | `String` | No |  |
-| `category` | `String` | No |  |
-| `content` | `String` | No |  |
-| `publishedDate` | `String` | No |  |
-| `slug` | `String` | No |  |
-| `tags` | `Array` | No |  |
-| `title` | `String` | No |  |
+| `author` | `String` | No | Article author |
+| `category` | `String` | No | Article category |
+| `content` | `String` | No | Article content |
+| `publishedDate` | `String` | No | Publication date |
+| `slug` | `String` | No | Article slug |
+| `tags` | `Array` | No | Article tags |
+| `title` | `String` | No | Article title |
 
 ### Operations
 
@@ -155,10 +155,10 @@ theme = client.Theme
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | `String` | No |  |
-| `id` | `String` | No |  |
-| `name` | `String` | No |  |
-| `slug` | `String` | No |  |
+| `description` | `String` | No | Theme description |
+| `id` | `String` | No | Theme identifier |
+| `name` | `String` | No | Theme name |
+| `slug` | `String` | No | URL slug for the theme |
 
 ### Operations
 

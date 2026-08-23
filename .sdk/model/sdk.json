@@ -36,42 +36,49 @@
               "active": true,
               "name": "author",
               "req": false,
+              "short": "Article author",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "category",
               "req": false,
+              "short": "Article category",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "content",
               "req": false,
+              "short": "Article content",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "publishedDate",
               "req": false,
+              "short": "Publication date",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "slug",
               "req": false,
+              "short": "Article slug",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "tags",
               "req": false,
+              "short": "Article tags",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "title",
               "req": false,
+              "short": "Article title",
               "type": "`$STRING`"
             }
           ],
@@ -139,24 +146,28 @@
               "active": true,
               "name": "description",
               "req": false,
+              "short": "Theme description",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Theme identifier",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "name",
               "req": false,
+              "short": "Theme name",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "slug",
               "req": false,
+              "short": "URL slug for the theme",
               "type": "`$STRING`"
             }
           ],

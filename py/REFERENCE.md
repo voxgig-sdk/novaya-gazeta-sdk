@@ -91,13 +91,13 @@ article = client.Article()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `author` | `str` | No |  |
-| `category` | `str` | No |  |
-| `content` | `str` | No |  |
-| `publishedDate` | `str` | No |  |
-| `slug` | `str` | No |  |
-| `tags` | `list` | No |  |
-| `title` | `str` | No |  |
+| `author` | `str` | No | Article author |
+| `category` | `str` | No | Article category |
+| `content` | `str` | No | Article content |
+| `publishedDate` | `str` | No | Publication date |
+| `slug` | `str` | No | Article slug |
+| `tags` | `list` | No | Article tags |
+| `title` | `str` | No | Article title |
 
 ### Operations
 
@@ -150,10 +150,10 @@ theme = client.Theme()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | `str` | No |  |
-| `id` | `str` | No |  |
-| `name` | `str` | No |  |
-| `slug` | `str` | No |  |
+| `description` | `str` | No | Theme description |
+| `id` | `str` | No | Theme identifier |
+| `name` | `str` | No | Theme name |
+| `slug` | `str` | No | URL slug for the theme |
 
 ### Operations
 

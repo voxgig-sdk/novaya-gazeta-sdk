@@ -232,13 +232,13 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `category` |  |
-| `content` |  |
-| `publishedDate` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
+| `author` | Article author |
+| `category` | Article category |
+| `content` | Article content |
+| `publishedDate` | Publication date |
+| `slug` | Article slug |
+| `tags` | Article tags |
+| `title` | Article title |
 
 Operations: List.
 
@@ -248,10 +248,10 @@ API path: `/get/slugs`
 
 | Field | Description |
 | --- | --- |
-| `description` |  |
-| `id` |  |
-| `name` |  |
-| `slug` |  |
+| `description` | Theme description |
+| `id` | Theme identifier |
+| `name` | Theme name |
+| `slug` | URL slug for the theme |
 
 Operations: List.
 
@@ -276,13 +276,13 @@ Create an instance: `local article = client:Article(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `string` |  |
-| `category` | `string` |  |
-| `content` | `string` |  |
-| `publishedDate` | `string` |  |
-| `slug` | `string` |  |
-| `tags` | `table` |  |
-| `title` | `string` |  |
+| `author` | `string` | Article author |
+| `category` | `string` | Article category |
+| `content` | `string` | Article content |
+| `publishedDate` | `string` | Publication date |
+| `slug` | `string` | Article slug |
+| `tags` | `table` | Article tags |
+| `title` | `string` | Article title |
 
 #### Example: List
 
@@ -305,10 +305,10 @@ Create an instance: `local theme = client:Theme(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `string` |  |
-| `id` | `string` |  |
-| `name` | `string` |  |
-| `slug` | `string` |  |
+| `description` | `string` | Theme description |
+| `id` | `string` | Theme identifier |
+| `name` | `string` | Theme name |
+| `slug` | `string` | URL slug for the theme |
 
 #### Example: List
 

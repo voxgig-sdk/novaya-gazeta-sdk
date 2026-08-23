@@ -8,36 +8,43 @@ main: kit: entity: article: {
     {
       name: "author"
       req: false
+      short: "Article author"
       type: "`$STRING`"
     }
     {
       name: "category"
       req: false
+      short: "Article category"
       type: "`$STRING`"
     }
     {
       name: "content"
       req: false
+      short: "Article content"
       type: "`$STRING`"
     }
     {
       name: "publishedDate"
       req: false
+      short: "Publication date"
       type: "`$STRING`"
     }
     {
       name: "slug"
       req: false
+      short: "Article slug"
       type: "`$STRING`"
     }
     {
       name: "tags"
       req: false
+      short: "Article tags"
       type: "`$ARRAY`"
     }
     {
       name: "title"
       req: false
+      short: "Article title"
       type: "`$STRING`"
     }
   ]

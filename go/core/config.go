@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "NovayaGazeta",
+			"slug": "novaya-gazeta",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -34,30 +37,37 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "author",
+						"short": "Article author",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "category",
+						"short": "Article category",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "content",
+						"short": "Article content",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "publishedDate",
+						"short": "Publication date",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "slug",
+						"short": "Article slug",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "tags",
+						"short": "Article tags",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "title",
+						"short": "Article title",
 						"type": "`$STRING`",
 					},
 				},
@@ -115,18 +125,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "description",
+						"short": "Theme description",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Theme identifier",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Theme name",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "slug",
+						"short": "URL slug for the theme",
 						"type": "`$STRING`",
 					},
 				},

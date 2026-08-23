@@ -244,13 +244,13 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `author` |  |
-| `category` |  |
-| `content` |  |
-| `publishedDate` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
+| `author` | Article author |
+| `category` | Article category |
+| `content` | Article content |
+| `publishedDate` | Publication date |
+| `slug` | Article slug |
+| `tags` | Article tags |
+| `title` | Article title |
 
 Operations: List.
 
@@ -260,10 +260,10 @@ API path: `/get/slugs`
 
 | Field | Description |
 | --- | --- |
-| `description` |  |
-| `id` |  |
-| `name` |  |
-| `slug` |  |
+| `description` | Theme description |
+| `id` | Theme identifier |
+| `name` | Theme name |
+| `slug` | URL slug for the theme |
 
 Operations: List.
 
@@ -288,13 +288,13 @@ Create an instance: `article = client.Article()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `author` | `str` |  |
-| `category` | `str` |  |
-| `content` | `str` |  |
-| `publishedDate` | `str` |  |
-| `slug` | `str` |  |
-| `tags` | `list` |  |
-| `title` | `str` |  |
+| `author` | `str` | Article author |
+| `category` | `str` | Article category |
+| `content` | `str` | Article content |
+| `publishedDate` | `str` | Publication date |
+| `slug` | `str` | Article slug |
+| `tags` | `list` | Article tags |
+| `title` | `str` | Article title |
 
 #### Example: List
 
@@ -317,10 +317,10 @@ Create an instance: `theme = client.Theme()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `description` | `str` |  |
-| `id` | `str` |  |
-| `name` | `str` |  |
-| `slug` | `str` |  |
+| `description` | `str` | Theme description |
+| `id` | `str` | Theme identifier |
+| `name` | `str` | Theme name |
+| `slug` | `str` | URL slug for the theme |
 
 #### Example: List
 

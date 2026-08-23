@@ -8,21 +8,25 @@ main: kit: entity: theme: {
     {
       name: "description"
       req: false
+      short: "Theme description"
       type: "`$STRING`"
     }
     {
       name: "id"
       req: false
+      short: "Theme identifier"
       type: "`$STRING`"
     }
     {
       name: "name"
       req: false
+      short: "Theme name"
       type: "`$STRING`"
     }
     {
       name: "slug"
       req: false
+      short: "URL slug for the theme"
       type: "`$STRING`"
     }
   ]

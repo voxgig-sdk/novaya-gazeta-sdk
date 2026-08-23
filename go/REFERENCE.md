@@ -102,13 +102,13 @@ fmt.Println(article.GetName()) // "article"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `author` | `string` | No |  |
-| `category` | `string` | No |  |
-| `content` | `string` | No |  |
-| `publishedDate` | `string` | No |  |
-| `slug` | `string` | No |  |
-| `tags` | `[]any` | No |  |
-| `title` | `string` | No |  |
+| `author` | `string` | No | Article author |
+| `category` | `string` | No | Article category |
+| `content` | `string` | No | Article content |
+| `publishedDate` | `string` | No | Publication date |
+| `slug` | `string` | No | Article slug |
+| `tags` | `[]any` | No | Article tags |
+| `title` | `string` | No | Article title |
 
 ### Operations
 
@@ -159,10 +159,10 @@ fmt.Println(theme.GetName()) // "theme"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `description` | `string` | No |  |
-| `id` | `string` | No |  |
-| `name` | `string` | No |  |
-| `slug` | `string` | No |  |
+| `description` | `string` | No | Theme description |
+| `id` | `string` | No | Theme identifier |
+| `name` | `string` | No | Theme name |
+| `slug` | `string` | No | URL slug for the theme |
 
 ### Operations
 
