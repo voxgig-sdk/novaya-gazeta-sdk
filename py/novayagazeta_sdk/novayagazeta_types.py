@@ -26,14 +26,12 @@ class Article(TypedDict, total=False):
     title: str
 
 
-class ArticleListMatch(TypedDict, total=False):
-    author: str
-    category: str
-    content: str
-    publishedDate: str
-    slug: str
-    tags: list
-    title: str
+class ArticleListMatchRequired(TypedDict):
+    slug: list
+
+
+class ArticleListMatch(ArticleListMatchRequired, total=False):
+    eu: bool
 
 
 class Theme(TypedDict, total=False):

@@ -27,13 +27,8 @@ class Article
 /** Request payload for Article#list. */
 class ArticleListMatch
 {
-    public ?string $author = null;
-    public ?string $category = null;
-    public ?string $content = null;
-    public ?string $publishedDate = null;
-    public ?string $slug = null;
-    public ?array $tags = null;
-    public ?string $title = null;
+    public ?bool $eu = null;
+    public array $slug;
 }
 
 /** Theme entity data model. */

@@ -16,13 +16,8 @@ export interface Article {
 }
 
 export interface ArticleListMatch {
-  author?: string
-  category?: string
-  content?: string
-  publishedDate?: string
-  slug?: string
-  tags?: any[]
-  title?: string
+  eu?: boolean
+  slug: any[]
 }
 
 export interface Theme {

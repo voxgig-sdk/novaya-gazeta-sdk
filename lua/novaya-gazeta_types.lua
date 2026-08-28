@@ -16,13 +16,8 @@
 ---@field title? string
 
 ---@class ArticleListMatch
----@field author? string
----@field category? string
----@field content? string
----@field publishedDate? string
----@field slug? string
----@field tags? table
----@field title? string
+---@field eu? boolean
+---@field slug table
 
 ---@class Theme
 ---@field description? string

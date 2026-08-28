@@ -25,13 +25,8 @@ type Article struct {
 
 // ArticleListMatch is the typed request payload for Article.ListTyped.
 type ArticleListMatch struct {
-	Author *string `json:"author,omitempty"`
-	Category *string `json:"category,omitempty"`
-	Content *string `json:"content,omitempty"`
-	PublishedDate *string `json:"publishedDate,omitempty"`
-	Slug *string `json:"slug,omitempty"`
-	Tags *[]any `json:"tags,omitempty"`
-	Title *string `json:"title,omitempty"`
+	Eu *bool `json:"eu,omitempty"`
+	Slug []any `json:"slug"`
 }
 
 // Theme is the typed data model for the theme entity.

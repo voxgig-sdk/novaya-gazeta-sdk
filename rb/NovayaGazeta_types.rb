@@ -43,34 +43,14 @@ Article = Struct.new(
 
 # Request payload for Article#list.
 #
-# @!attribute [rw] author
-#   @return [String, nil]
-#
-# @!attribute [rw] category
-#   @return [String, nil]
-#
-# @!attribute [rw] content
-#   @return [String, nil]
-#
-# @!attribute [rw] publishedDate
-#   @return [String, nil]
+# @!attribute [rw] eu
+#   @return [Boolean, nil]
 #
 # @!attribute [rw] slug
-#   @return [String, nil]
-#
-# @!attribute [rw] tags
-#   @return [Array, nil]
-#
-# @!attribute [rw] title
-#   @return [String, nil]
+#   @return [Array]
 ArticleListMatch = Struct.new(
-  :author,
-  :category,
-  :content,
-  :publishedDate,
+  :eu,
   :slug,
-  :tags,
-  :title,
   keyword_init: true
 )
 
