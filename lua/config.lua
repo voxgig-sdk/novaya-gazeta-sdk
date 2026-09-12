@@ -48,6 +48,7 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
           {
+            ["format"] = "date-time",
             ["name"] = "publishedDate",
             ["short"] = "Publication date",
             ["type"] = "`$STRING`",
@@ -96,9 +97,13 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/get/slugs",
-                ["parts"] = {
-                  "get",
-                  "slugs",
+                ["segments"] = {
+                  {
+                    ["lit"] = "get",
+                  },
+                  {
+                    ["lit"] = "slugs",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -109,6 +114,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "get",
+                  "slugs",
                 },
               },
             },
@@ -141,6 +150,10 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "theme",
         ["op"] = {
           ["list"] = {
@@ -152,14 +165,22 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/get/themes",
-                ["parts"] = {
-                  "get",
-                  "themes",
+                ["segments"] = {
+                  {
+                    ["lit"] = "get",
+                  },
+                  {
+                    ["lit"] = "themes",
+                  },
                 },
                 ["select"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "get",
+                  "themes",
                 },
               },
             },

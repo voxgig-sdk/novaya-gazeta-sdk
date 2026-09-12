@@ -60,6 +60,7 @@ module NovayaGazetaConfig
               "type" => "`$STRING`",
             },
             {
+              "format" => "date-time",
               "name" => "publishedDate",
               "short" => "Publication date",
               "type" => "`$STRING`",
@@ -108,9 +109,13 @@ module NovayaGazetaConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/get/slugs",
-                  "parts" => [
-                    "get",
-                    "slugs",
+                  "segments" => [
+                    {
+                      "lit" => "get",
+                    },
+                    {
+                      "lit" => "slugs",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -122,6 +127,10 @@ module NovayaGazetaConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "get",
+                    "slugs",
+                  ],
                 },
               ],
             },
@@ -153,6 +162,10 @@ module NovayaGazetaConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "theme",
           "op" => {
             "list" => {
@@ -164,15 +177,23 @@ module NovayaGazetaConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/get/themes",
-                  "parts" => [
-                    "get",
-                    "themes",
+                  "segments" => [
+                    {
+                      "lit" => "get",
+                    },
+                    {
+                      "lit" => "themes",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "get",
+                    "themes",
+                  ],
                 },
               ],
             },

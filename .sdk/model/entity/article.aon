@@ -24,6 +24,7 @@ main: kit: entity: article: {
       type: "`$STRING`"
     }
     {
+      format: "date-time"
       name: "publishedDate"
       req: false
       short: "Publication date"
@@ -76,9 +77,13 @@ main: kit: entity: article: {
           }
           method: "GET"
           orig: "/get/slugs"
-          parts: [
-            "get"
-            "slugs"
+          segments: [
+            {
+              lit: "get"
+            }
+            {
+              lit: "slugs"
+            }
           ]
           select: {
             exist: [
