@@ -105,7 +105,7 @@ local results, err = client:Article():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
+| TypeScript | `@voxgig-sdk/novaya-gazeta-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
 | Python | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
 | PHP | `voxgig-sdk/novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/novaya-gazeta-sdk/go` | `go get github.com/voxgig-sdk/novaya-gazeta-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Article():list()
 ### TypeScript
 
 ```ts
-import { NovayaGazetaSDK } from '@voxgig-sdk/novaya-gazeta'
+import { NovayaGazetaSDK } from '@voxgig-sdk/novaya-gazeta-sdk'
 
 const client = new NovayaGazetaSDK()
 

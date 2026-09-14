@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { NovayaGazetaSDK } from '@voxgig-sdk/novaya-gazeta'
+import { NovayaGazetaSDK } from '@voxgig-sdk/novaya-gazeta-sdk'
 
 const client = new NovayaGazetaSDK()
 ```
@@ -455,7 +455,7 @@ novaya-gazeta/
 Import the SDK from the package root:
 
 ```ts
-import { NovayaGazetaSDK } from '@voxgig-sdk/novaya-gazeta'
+import { NovayaGazetaSDK } from '@voxgig-sdk/novaya-gazeta-sdk'
 ```
 
 ### Entity state
