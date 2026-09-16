@@ -42,6 +42,12 @@ main: kit: entity: theme: {
       name: "list"
       points: [
         {
+          contract: {
+            id: "GET /get/themes"
+            json: "{\"operationId\":\"getThemesList\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"description\":{\"description\":\"Theme description\",\"type\":\"string\"},\"id\":{\"description\":\"Theme identifier\",\"type\":\"string\"},\"name\":{\"description\":\"Theme name\",\"type\":\"string\"},\"slug\":{\"description\":\"URL slug for the theme\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successfully retrieved themes list\"},\"400\":{\"description\":\"Bad request\"},\"500\":{\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}"
+            source: "openapi3"
+            version: 1
+          }
           method: "GET"
           orig: "/get/themes"
           segments: [

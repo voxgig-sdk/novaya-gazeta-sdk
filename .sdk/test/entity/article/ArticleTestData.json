@@ -42,5 +42,99 @@
         "title": "s11e"
       }
     }
+  },
+  "requests": {
+    "GET /get/slugs": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getSlugsList",
+        "parameters": [
+          {
+            "description": "Whether to use novayagazeta.eu (true) or novayagazeta.ru (false)",
+            "in": "query",
+            "name": "eu",
+            "required": false,
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            }
+          },
+          {
+            "description": "Array of article slugs to retrieve (e.g., 2026/04/24/daleko-idushchie-vyvody-nalichnykh)",
+            "explode": true,
+            "in": "query",
+            "name": "slugs",
+            "required": true,
+            "schema": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "style": "form"
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "author": {
+                        "description": "Article author",
+                        "type": "string"
+                      },
+                      "category": {
+                        "description": "Article category",
+                        "type": "string"
+                      },
+                      "content": {
+                        "description": "Article content",
+                        "type": "string"
+                      },
+                      "publishedDate": {
+                        "description": "Publication date",
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "slug": {
+                        "description": "Article slug",
+                        "type": "string"
+                      },
+                      "tags": {
+                        "description": "Article tags",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "title": {
+                        "description": "Article title",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successfully retrieved articles"
+          },
+          "400": {
+            "description": "Bad request - invalid slug format"
+          },
+          "404": {
+            "description": "Articles not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }

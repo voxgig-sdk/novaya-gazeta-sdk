@@ -1,12 +1,18 @@
 # NovayaGazeta SDK feature factory
 
 from novayagazeta_sdk.feature.base_feature import NovayaGazetaBaseFeature
+from novayagazeta_sdk.feature.ratelimit_feature import NovayaGazetaRatelimitFeature
+from novayagazeta_sdk.feature.retry_feature import NovayaGazetaRetryFeature
 from novayagazeta_sdk.feature.test_feature import NovayaGazetaTestFeature
+from novayagazeta_sdk.feature.timeout_feature import NovayaGazetaTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: NovayaGazetaBaseFeature(),
+    "ratelimit": lambda: NovayaGazetaRatelimitFeature(),
+    "retry": lambda: NovayaGazetaRetryFeature(),
     "test": lambda: NovayaGazetaTestFeature(),
+    "timeout": lambda: NovayaGazetaTimeoutFeature(),
 }
 
 

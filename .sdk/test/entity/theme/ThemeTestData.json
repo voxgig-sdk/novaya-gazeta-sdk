@@ -29,5 +29,55 @@
         "slug": "sa3"
       }
     }
+  },
+  "requests": {
+    "GET /get/themes": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getThemesList",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "description": {
+                        "description": "Theme description",
+                        "type": "string"
+                      },
+                      "id": {
+                        "description": "Theme identifier",
+                        "type": "string"
+                      },
+                      "name": {
+                        "description": "Theme name",
+                        "type": "string"
+                      },
+                      "slug": {
+                        "description": "URL slug for the theme",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successfully retrieved themes list"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }
