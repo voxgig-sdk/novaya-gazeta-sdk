@@ -1,4 +1,4 @@
 # Flows
 
-@"BasicArticleFlow.aon"
-@"BasicThemeFlow.aon"
+@"./BasicArticleFlow.aon"
+@"./BasicThemeFlow.aon"

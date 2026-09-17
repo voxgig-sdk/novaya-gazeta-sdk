@@ -1,4 +1,4 @@
 # Entity Models
 
-@"article.aon"
-@"theme.aon"
+@"./article.aon"
+@"./theme.aon"

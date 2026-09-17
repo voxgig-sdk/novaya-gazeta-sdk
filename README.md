@@ -105,12 +105,12 @@ local results, err = client:Article():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/novaya-gazeta-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
-| Python | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
-| PHP | `voxgig-sdk/novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
+| TypeScript | `@voxgig-sdk/novaya-gazeta-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/tags) |
+| Python | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/tags) |
+| PHP | `voxgig-sdk/novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/novaya-gazeta-sdk/go` | `go get github.com/voxgig-sdk/novaya-gazeta-sdk/go@latest` |
-| Ruby | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
-| Lua | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases) |
+| Ruby | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/tags) |
+| Lua | `voxgig-sdk-novaya-gazeta` | publish pending — [install from git tag](https://github.com/voxgig-sdk/novaya-gazeta-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/novaya-gazeta-sdk/go-cli` | `go install github.com/voxgig-sdk/novaya-gazeta-sdk/go-cli/cmd/novaya-gazeta@latest` |
 | Go MCP server | `github.com/voxgig-sdk/novaya-gazeta-sdk/go-mcp` | `go get github.com/voxgig-sdk/novaya-gazeta-sdk/go-mcp@latest` |
 
