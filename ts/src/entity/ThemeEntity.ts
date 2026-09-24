@@ -19,7 +19,6 @@ import type {
   ThemeListMatch,
 } from '../NovayaGazetaTypes'
 
-// TODO: needs Entity superclass
 class ThemeEntity extends NovayaGazetaEntityBase<Theme> {
 
   constructor(client: NovayaGazetaSDK, entopts: any) {

@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ThemeEntity = void 0;
 const NovayaGazetaEntityBase_1 = require("../NovayaGazetaEntityBase");
-// TODO: needs Entity superclass
 class ThemeEntity extends NovayaGazetaEntityBase_1.NovayaGazetaEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

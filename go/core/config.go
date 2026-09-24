@@ -92,39 +92,46 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "author",
-						"short": "Article author",
+						"title": "Author",
 						"type": "`$STRING`",
+						"short": "Article author",
 					},
 					map[string]any{
 						"name": "category",
-						"short": "Article category",
+						"title": "Category",
 						"type": "`$STRING`",
+						"short": "Article category",
 					},
 					map[string]any{
 						"name": "content",
-						"short": "Article content",
+						"title": "Content",
 						"type": "`$STRING`",
+						"short": "Article content",
 					},
 					map[string]any{
-						"format": "date-time",
 						"name": "publishedDate",
-						"short": "Publication date",
+						"title": "Published Date",
 						"type": "`$STRING`",
+						"short": "Publication date",
+						"format": "date-time",
 					},
 					map[string]any{
 						"name": "slug",
-						"short": "Article slug",
+						"title": "Slug",
 						"type": "`$STRING`",
+						"short": "Article slug",
 					},
 					map[string]any{
 						"name": "tags",
-						"short": "Article tags",
+						"title": "Tags",
 						"type": "`$ARRAY`",
+						"short": "Article tags",
 					},
 					map[string]any{
 						"name": "title",
-						"short": "Article title",
+						"title": "Title",
 						"type": "`$STRING`",
+						"short": "Article title",
 					},
 				},
 				"name": "article",
@@ -134,24 +141,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"example": false,
-											"kind": "query",
-											"name": "eu",
-											"orig": "eu",
-											"type": "`$BOOLEAN`",
-										},
-										map[string]any{
-											"kind": "query",
-											"name": "slug",
-											"orig": "slug",
-											"reqd": true,
-											"type": "`$ARRAY`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/get/slugs",
@@ -163,19 +152,38 @@ func MakeConfig() map[string]any {
 										"lit": "slugs",
 									},
 								},
+								"parts": []any{
+									"get",
+									"slugs",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "eu",
+											"orig": "eu",
+											"type": "`$BOOLEAN`",
+											"kind": "query",
+											"example": false,
+										},
+										map[string]any{
+											"name": "slug",
+											"orig": "slug",
+											"type": "`$ARRAY`",
+											"kind": "query",
+											"reqd": true,
+										},
+									},
+								},
 								"select": map[string]any{
 									"exist": []any{
 										"eu",
 										"slug",
 									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
-								"parts": []any{
-									"get",
-									"slugs",
 								},
 							},
 						},
@@ -189,23 +197,27 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "description",
-						"short": "Theme description",
+						"title": "Description",
 						"type": "`$STRING`",
+						"short": "Theme description",
 					},
 					map[string]any{
 						"name": "id",
-						"short": "Theme identifier",
+						"title": "Id",
 						"type": "`$STRING`",
+						"short": "Theme identifier",
 					},
 					map[string]any{
 						"name": "name",
-						"short": "Theme name",
+						"title": "Name",
 						"type": "`$STRING`",
+						"short": "Theme name",
 					},
 					map[string]any{
 						"name": "slug",
-						"short": "URL slug for the theme",
+						"title": "Slug",
 						"type": "`$STRING`",
+						"short": "URL slug for the theme",
 					},
 				},
 				"id": map[string]any{
@@ -219,7 +231,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/get/themes",
@@ -231,15 +242,17 @@ func MakeConfig() map[string]any {
 										"lit": "themes",
 									},
 								},
-								"select": map[string]any{},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"get",
 									"themes",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

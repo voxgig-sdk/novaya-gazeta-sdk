@@ -1,0 +1,117 @@
+# Entity: article
+
+main: kit: entity: article: {
+
+  alias: field: {}
+
+  fields: {
+    author: {
+      h: "Author"
+      n: "author"
+      r: false
+      sh: "Article author"
+      t: "`$STRING`"
+    }
+    category: {
+      h: "Category"
+      n: "category"
+      r: false
+      sh: "Article category"
+      t: "`$STRING`"
+    }
+    content: {
+      h: "Content"
+      n: "content"
+      r: false
+      sh: "Article content"
+      t: "`$STRING`"
+    }
+    publishedDate: {
+      fo: "date-time"
+      h: "Published Date"
+      n: "publishedDate"
+      r: false
+      sh: "Publication date"
+      t: "`$STRING`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: false
+      sh: "Article slug"
+      t: "`$STRING`"
+    }
+    tags: {
+      h: "Tags"
+      n: "tags"
+      r: false
+      sh: "Article tags"
+      t: "`$ARRAY`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: false
+      sh: "Article title"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "article"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /get/slugs"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: false
+                k: "query"
+                n: "eu"
+                or: "eu"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$ARRAY`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/get/slugs"
+          q: {
+            exist: [
+              "eu"
+              "slug"
+            ]
+          }
+          s: [
+            {
+              lit: "get"
+            }
+            {
+              lit: "slugs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

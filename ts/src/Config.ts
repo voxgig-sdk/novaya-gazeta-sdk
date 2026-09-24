@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -142,39 +135,46 @@ class Config {
       "fields": [
         {
           "name": "author",
-          "short": "Article author",
-          "type": "`$STRING`"
+          "title": "Author",
+          "type": "`$STRING`",
+          "short": "Article author"
         },
         {
           "name": "category",
-          "short": "Article category",
-          "type": "`$STRING`"
+          "title": "Category",
+          "type": "`$STRING`",
+          "short": "Article category"
         },
         {
           "name": "content",
-          "short": "Article content",
-          "type": "`$STRING`"
+          "title": "Content",
+          "type": "`$STRING`",
+          "short": "Article content"
         },
         {
-          "format": "date-time",
           "name": "publishedDate",
+          "title": "Published Date",
+          "type": "`$STRING`",
           "short": "Publication date",
-          "type": "`$STRING`"
+          "format": "date-time"
         },
         {
           "name": "slug",
-          "short": "Article slug",
-          "type": "`$STRING`"
+          "title": "Slug",
+          "type": "`$STRING`",
+          "short": "Article slug"
         },
         {
           "name": "tags",
-          "short": "Article tags",
-          "type": "`$ARRAY`"
+          "title": "Tags",
+          "type": "`$ARRAY`",
+          "short": "Article tags"
         },
         {
           "name": "title",
-          "short": "Article title",
-          "type": "`$STRING`"
+          "title": "Title",
+          "type": "`$STRING`",
+          "short": "Article title"
         }
       ],
       "name": "article",
@@ -184,24 +184,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "args": {
-                "query": [
-                  {
-                    "example": false,
-                    "kind": "query",
-                    "name": "eu",
-                    "orig": "eu",
-                    "type": "`$BOOLEAN`"
-                  },
-                  {
-                    "kind": "query",
-                    "name": "slug",
-                    "orig": "slug",
-                    "reqd": true,
-                    "type": "`$ARRAY`"
-                  }
-                ]
-              },
               "kind": "http",
               "method": "GET",
               "orig": "/get/slugs",
@@ -213,20 +195,39 @@ class Config {
                   "lit": "slugs"
                 }
               ],
+              "parts": [
+                "get",
+                "slugs"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "query": [
+                  {
+                    "name": "eu",
+                    "orig": "eu",
+                    "type": "`$BOOLEAN`",
+                    "kind": "query",
+                    "example": false
+                  },
+                  {
+                    "name": "slug",
+                    "orig": "slug",
+                    "type": "`$ARRAY`",
+                    "kind": "query",
+                    "reqd": true
+                  }
+                ]
+              },
               "select": {
                 "exist": [
                   "eu",
                   "slug"
                 ]
-              },
-              "transform": {
-                "req": "`reqdata`",
-                "res": "`body`"
-              },
-              "parts": [
-                "get",
-                "slugs"
-              ]
+              }
             }
           ]
         }
@@ -239,23 +240,27 @@ class Config {
       "fields": [
         {
           "name": "description",
-          "short": "Theme description",
-          "type": "`$STRING`"
+          "title": "Description",
+          "type": "`$STRING`",
+          "short": "Theme description"
         },
         {
           "name": "id",
-          "short": "Theme identifier",
-          "type": "`$STRING`"
+          "title": "Id",
+          "type": "`$STRING`",
+          "short": "Theme identifier"
         },
         {
           "name": "name",
-          "short": "Theme name",
-          "type": "`$STRING`"
+          "title": "Name",
+          "type": "`$STRING`",
+          "short": "Theme name"
         },
         {
           "name": "slug",
-          "short": "URL slug for the theme",
-          "type": "`$STRING`"
+          "title": "Slug",
+          "type": "`$STRING`",
+          "short": "URL slug for the theme"
         }
       ],
       "id": {
@@ -269,7 +274,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "args": {},
               "kind": "http",
               "method": "GET",
               "orig": "/get/themes",
@@ -281,15 +285,17 @@ class Config {
                   "lit": "themes"
                 }
               ],
-              "select": {},
+              "parts": [
+                "get",
+                "themes"
+              ],
+              "rename": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "parts": [
-                "get",
-                "themes"
-              ]
+              "args": {},
+              "select": {}
             }
           ]
         }

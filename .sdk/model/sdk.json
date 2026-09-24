@@ -24,64 +24,137 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "article": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "author",
-              "req": false,
-              "short": "Article author",
-              "type": "`$STRING`"
+          "fields": {
+            "author": {
+              "a": true,
+              "h": "Author",
+              "n": "author",
+              "r": false,
+              "sh": "Article author",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "category",
-              "req": false,
-              "short": "Article category",
-              "type": "`$STRING`"
+            "category": {
+              "a": true,
+              "h": "Category",
+              "n": "category",
+              "r": false,
+              "sh": "Article category",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "content",
-              "req": false,
-              "short": "Article content",
-              "type": "`$STRING`"
+            "content": {
+              "a": true,
+              "h": "Content",
+              "n": "content",
+              "r": false,
+              "sh": "Article content",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "format": "date-time",
-              "name": "publishedDate",
-              "req": false,
-              "short": "Publication date",
-              "type": "`$STRING`"
+            "publishedDate": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Published Date",
+              "n": "publishedDate",
+              "r": false,
+              "sh": "Publication date",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "slug",
-              "req": false,
-              "short": "Article slug",
-              "type": "`$STRING`"
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": false,
+              "sh": "Article slug",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "tags",
-              "req": false,
-              "short": "Article tags",
-              "type": "`$ARRAY`"
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "sh": "Article tags",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "title",
-              "req": false,
-              "short": "Article title",
-              "type": "`$STRING`"
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": false,
+              "sh": "Article title",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "name": "article",
           "op": {
             "list": {
@@ -89,38 +162,44 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /get/slugs",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "query": [
                       {
-                        "active": true,
-                        "example": false,
-                        "kind": "query",
-                        "name": "eu",
-                        "orig": "eu",
-                        "reqd": false,
-                        "type": "`$BOOLEAN`"
+                        "a": true,
+                        "ex": false,
+                        "k": "query",
+                        "n": "eu",
+                        "or": "eu",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
                       },
                       {
-                        "active": true,
-                        "kind": "query",
-                        "name": "slug",
-                        "orig": "slug",
-                        "reqd": true,
-                        "type": "`$ARRAY`"
+                        "a": true,
+                        "k": "query",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$ARRAY`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /get/slugs",
-                    "json": "{\"operationId\":\"getSlugsList\",\"parameters\":[{\"description\":\"Whether to use novayagazeta.eu (true) or novayagazeta.ru (false)\",\"in\":\"query\",\"name\":\"eu\",\"required\":false,\"schema\":{\"default\":false,\"type\":\"boolean\"}},{\"description\":\"Array of article slugs to retrieve (e.g., 2026/04/24/daleko-idushchie-vyvody-nalichnykh)\",\"explode\":true,\"in\":\"query\",\"name\":\"slugs\",\"required\":true,\"schema\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"style\":\"form\"}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"author\":{\"description\":\"Article author\",\"type\":\"string\"},\"category\":{\"description\":\"Article category\",\"type\":\"string\"},\"content\":{\"description\":\"Article content\",\"type\":\"string\"},\"publishedDate\":{\"description\":\"Publication date\",\"format\":\"date-time\",\"type\":\"string\"},\"slug\":{\"description\":\"Article slug\",\"type\":\"string\"},\"tags\":{\"description\":\"Article tags\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"title\":{\"description\":\"Article title\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successfully retrieved articles\"},\"400\":{\"description\":\"Bad request - invalid slug format\"},\"404\":{\"description\":\"Articles not found\"},\"500\":{\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/get/slugs",
+                  "q": {
+                    "exist": [
+                      "eu",
+                      "slug"
+                    ]
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/get/slugs",
-                  "segments": [
+                  "r": {},
+                  "s": [
                     {
                       "lit": "get"
                     },
@@ -128,13 +207,7 @@
                       "lit": "slugs"
                     }
                   ],
-                  "select": {
-                    "exist": [
-                      "eu",
-                      "slug"
-                    ]
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -151,36 +224,40 @@
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "description",
-              "req": false,
-              "short": "Theme description",
-              "type": "`$STRING`"
+          "fields": {
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "sh": "Theme description",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "id",
-              "req": false,
-              "short": "Theme identifier",
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "sh": "Theme identifier",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "short": "Theme name",
-              "type": "`$STRING`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "sh": "Theme name",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "slug",
-              "req": false,
-              "short": "URL slug for the theme",
-              "type": "`$STRING`"
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": false,
+              "sh": "URL slug for the theme",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -192,18 +269,19 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "GET /get/themes",
-                    "json": "{\"operationId\":\"getThemesList\",\"parameters\":[],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"description\":{\"description\":\"Theme description\",\"type\":\"string\"},\"id\":{\"description\":\"Theme identifier\",\"type\":\"string\"},\"name\":{\"description\":\"Theme name\",\"type\":\"string\"},\"slug\":{\"description\":\"URL slug for the theme\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successfully retrieved themes list\"},\"400\":{\"description\":\"Bad request\"},\"500\":{\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/get/themes",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/get/themes",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "get"
                     },
@@ -211,8 +289,7 @@
                       "lit": "themes"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -641,13 +718,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {
@@ -667,13 +744,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {

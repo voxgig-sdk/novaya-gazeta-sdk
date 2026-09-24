@@ -1,7 +1,7 @@
 // Typed models for the NovayaGazeta SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,13 +14,6 @@ import (
 
 // Article is the typed data model for the article entity.
 type Article struct {
-	Author *string `json:"author,omitempty"`
-	Category *string `json:"category,omitempty"`
-	Content *string `json:"content,omitempty"`
-	PublishedDate *string `json:"publishedDate,omitempty"`
-	Slug *string `json:"slug,omitempty"`
-	Tags *[]any `json:"tags,omitempty"`
-	Title *string `json:"title,omitempty"`
 }
 
 // ArticleListMatch is the typed request payload for Article.ListTyped.
@@ -31,10 +24,6 @@ type ArticleListMatch struct {
 
 // Theme is the typed data model for the theme entity.
 type Theme struct {
-	Description *string `json:"description,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
-	Slug *string `json:"slug,omitempty"`
 }
 
 // ThemeListMatch is the typed request payload for Theme.ListTyped.

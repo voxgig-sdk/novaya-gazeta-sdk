@@ -19,7 +19,6 @@ import type {
   ArticleListMatch,
 } from '../NovayaGazetaTypes'
 
-// TODO: needs Entity superclass
 class ArticleEntity extends NovayaGazetaEntityBase<Article> {
 
   constructor(client: NovayaGazetaSDK, entopts: any) {

@@ -117,39 +117,46 @@ def make_config():
         "fields": [
           {
             "name": "author",
-            "short": "Article author",
+            "title": "Author",
             "type": "`$STRING`",
+            "short": "Article author",
           },
           {
             "name": "category",
-            "short": "Article category",
+            "title": "Category",
             "type": "`$STRING`",
+            "short": "Article category",
           },
           {
             "name": "content",
-            "short": "Article content",
+            "title": "Content",
             "type": "`$STRING`",
+            "short": "Article content",
           },
           {
-            "format": "date-time",
             "name": "publishedDate",
-            "short": "Publication date",
+            "title": "Published Date",
             "type": "`$STRING`",
+            "short": "Publication date",
+            "format": "date-time",
           },
           {
             "name": "slug",
-            "short": "Article slug",
+            "title": "Slug",
             "type": "`$STRING`",
+            "short": "Article slug",
           },
           {
             "name": "tags",
-            "short": "Article tags",
+            "title": "Tags",
             "type": "`$ARRAY`",
+            "short": "Article tags",
           },
           {
             "name": "title",
-            "short": "Article title",
+            "title": "Title",
             "type": "`$STRING`",
+            "short": "Article title",
           },
         ],
         "name": "article",
@@ -159,24 +166,6 @@ def make_config():
             "name": "list",
             "points": [
               {
-                "args": {
-                  "query": [
-                    {
-                      "example": False,
-                      "kind": "query",
-                      "name": "eu",
-                      "orig": "eu",
-                      "type": "`$BOOLEAN`",
-                    },
-                    {
-                      "kind": "query",
-                      "name": "slug",
-                      "orig": "slug",
-                      "reqd": True,
-                      "type": "`$ARRAY`",
-                    },
-                  ],
-                },
                 "kind": "http",
                 "method": "GET",
                 "orig": "/get/slugs",
@@ -188,20 +177,39 @@ def make_config():
                     "lit": "slugs",
                   },
                 ],
+                "parts": [
+                  "get",
+                  "slugs",
+                ],
+                "rename": {},
+                "transform": {
+                  "req": "`reqdata`",
+                  "res": "`body`",
+                },
+                "args": {
+                  "query": [
+                    {
+                      "name": "eu",
+                      "orig": "eu",
+                      "type": "`$BOOLEAN`",
+                      "kind": "query",
+                      "example": False,
+                    },
+                    {
+                      "name": "slug",
+                      "orig": "slug",
+                      "type": "`$ARRAY`",
+                      "kind": "query",
+                      "reqd": True,
+                    },
+                  ],
+                },
                 "select": {
                   "exist": [
                     "eu",
                     "slug",
                   ],
                 },
-                "transform": {
-                  "req": "`reqdata`",
-                  "res": "`body`",
-                },
-                "parts": [
-                  "get",
-                  "slugs",
-                ],
               },
             ],
           },
@@ -214,23 +222,27 @@ def make_config():
         "fields": [
           {
             "name": "description",
-            "short": "Theme description",
+            "title": "Description",
             "type": "`$STRING`",
+            "short": "Theme description",
           },
           {
             "name": "id",
-            "short": "Theme identifier",
+            "title": "Id",
             "type": "`$STRING`",
+            "short": "Theme identifier",
           },
           {
             "name": "name",
-            "short": "Theme name",
+            "title": "Name",
             "type": "`$STRING`",
+            "short": "Theme name",
           },
           {
             "name": "slug",
-            "short": "URL slug for the theme",
+            "title": "Slug",
             "type": "`$STRING`",
+            "short": "URL slug for the theme",
           },
         ],
         "id": {
@@ -244,7 +256,6 @@ def make_config():
             "name": "list",
             "points": [
               {
-                "args": {},
                 "kind": "http",
                 "method": "GET",
                 "orig": "/get/themes",
@@ -256,15 +267,17 @@ def make_config():
                     "lit": "themes",
                   },
                 ],
-                "select": {},
-                "transform": {
-                  "req": "`reqdata`",
-                  "res": "`body`",
-                },
                 "parts": [
                   "get",
                   "themes",
                 ],
+                "rename": {},
+                "transform": {
+                  "req": "`reqdata`",
+                  "res": "`body`",
+                },
+                "args": {},
+                "select": {},
               },
             ],
           },

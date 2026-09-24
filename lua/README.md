@@ -43,7 +43,7 @@ local articles, err = client:Article():list()
 if err then error(err) end
 
 for _, item in ipairs(articles) do
-  print(item["author"])
+  print(item)
 end
 ```
 
