@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 NovayaGazetaUtility.registrar = ->(u) {
   u.clean = NovayaGazetaUtilities::Clean
+  u.clean_add = NovayaGazetaUtilities::CleanAdd
+  u.clean_explain = NovayaGazetaUtilities::CleanExplain
   u.done = NovayaGazetaUtilities::Done
   u.make_error = NovayaGazetaUtilities::MakeError
   u.feature_add = NovayaGazetaUtilities::FeatureAdd

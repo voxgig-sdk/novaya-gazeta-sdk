@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 NovayaGazetaUtility::setRegistrar(function (NovayaGazetaUtility $u): void {
     $u->clean = [NovayaGazetaClean::class, 'call'];
+    $u->clean_add = [NovayaGazetaClean::class, 'add'];
+    $u->clean_explain = [NovayaGazetaDone::class, 'clean_explain'];
     $u->done = [NovayaGazetaDone::class, 'call'];
     $u->make_error = [NovayaGazetaMakeError::class, 'call'];
     $u->feature_add = [NovayaGazetaFeatureAdd::class, 'call'];

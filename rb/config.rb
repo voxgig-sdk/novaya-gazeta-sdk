@@ -180,7 +180,7 @@ module NovayaGazetaConfig
                       },
                       {
                         "name" => "slug",
-                        "orig" => "slug",
+                        "orig" => "slugs",
                         "type" => "`$ARRAY`",
                         "kind" => "query",
                         "reqd" => true,

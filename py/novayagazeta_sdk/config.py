@@ -197,7 +197,7 @@ def make_config():
                     },
                     {
                       "name": "slug",
-                      "orig": "slug",
+                      "orig": "slugs",
                       "type": "`$ARRAY`",
                       "kind": "query",
                       "reqd": True,

@@ -81,7 +81,7 @@ main: kit: entity: article: {
               {
                 k: "query"
                 n: "slug"
-                or: "slug"
+                or: "slugs"
                 r: true
                 t: "`$ARRAY`"
               }
