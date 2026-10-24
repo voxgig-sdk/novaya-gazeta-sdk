@@ -16,13 +16,27 @@ const PLAN: any[] = [
     "path": "/get/slugs",
     "args": [],
     "select": {
-      "eu": "v1",
-      "slug": "v1"
+      "slug": "v1",
+      "eu": "v1"
     },
     "headers": [],
+    "cookies": [],
+    "responseMedia": [
+      "application/json"
+    ],
     "query": [
       "eu",
       "slugs"
+    ],
+    "queryArgs": [
+      {
+        "name": "eu",
+        "wire": "eu"
+      },
+      {
+        "name": "slug",
+        "wire": "slugs"
+      }
     ],
     "auth": null,
     "status": 200,
@@ -50,7 +64,12 @@ const PLAN: any[] = [
     "args": [],
     "select": {},
     "headers": [],
+    "cookies": [],
+    "responseMedia": [
+      "application/json"
+    ],
     "query": [],
+    "queryArgs": [],
     "auth": null,
     "status": 200,
     "sample": [

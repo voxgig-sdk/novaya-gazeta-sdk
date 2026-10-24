@@ -3,5 +3,23 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Article author",
+      "Article category",
+      "Article content",
+      "Article slug",
+      "Novaya Gazeta EU API Server",
+      "Novaya Gazeta RU API Server",
+      "Publication date",
+      "Successfully retrieved articles",
+      "Successfully retrieved themes list",
+      "Theme description",
+      "Theme identifier",
+      "Theme name",
+      "This API provides news, analytics, expert opinions, special reports, and journalistic investigations related to Russia, Ukraine, and Europe from novayagazeta.eu and novayagazeta.ru. It allows users to access various media content and updates in real-time.",
+      "URL slug for the theme"
+    ]
+  }
 }

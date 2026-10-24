@@ -53,6 +53,10 @@ main: kit: entity: theme: {
           }
           m: "GET"
           o: "/get/themes"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
           s: [
             {
               lit: "get"

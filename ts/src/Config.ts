@@ -102,6 +102,7 @@ class Config {
       },
       "optspec": {
         "clearTimer": "`$FUNCTION`",
+        "now": "`$FUNCTION`",
         "setTimer": "`$FUNCTION`"
       },
       "strict": false,
@@ -218,15 +219,19 @@ class Config {
                     "orig": "slugs",
                     "type": "`$ARRAY`",
                     "kind": "query",
-                    "reqd": true
+                    "reqd": true,
+                    "field": true
                   }
                 ]
               },
               "select": {
                 "exist": [
-                  "eu",
                   "slug"
                 ]
+              },
+              "response": {
+                "kind": "json",
+                "media": "application/json"
               }
             }
           ]
@@ -295,7 +300,11 @@ class Config {
                 "res": "`body`"
               },
               "args": {},
-              "select": {}
+              "select": {},
+              "response": {
+                "kind": "json",
+                "media": "application/json"
+              }
             }
           ]
         }

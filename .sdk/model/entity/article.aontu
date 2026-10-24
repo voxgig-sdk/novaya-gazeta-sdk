@@ -91,9 +91,12 @@ main: kit: entity: article: {
           o: "/get/slugs"
           q: {
             exist: [
-              "eu"
               "slug"
             ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {

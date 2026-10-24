@@ -12,7 +12,7 @@ It exposes the API as capitalised, semantic **Entities** — e.g. `client:Articl
 
 ## Install
 This package is not yet published to LuaRocks. Install it from the
-GitHub release tag (`lua/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/novaya-gazeta-sdk/releases)),
+GitHub release tag (`lua/vX.Y.Z`, see [Tags](https://github.com/voxgig-sdk/novaya-gazeta-sdk/tags)),
 or add the source directory to your `LUA_PATH`:
 
 ```bash
@@ -35,15 +35,16 @@ local client = sdk.new()
 
 ### 2. List article records
 
-Entity operations return `(value, err)`. For `list`, `value` is the
-array of records itself — iterate it directly (there is no wrapper).
+Entity operations return `(value, err)`. For `list`, `value` is an
+array of entities, one per record — iterate it directly (there is no
+wrapper), and read each record with `data_get()`.
 
 ```lua
-local articles, err = client:Article():list()
+local articles, err = client:Article():list({ slug = {} })
 if err then error(err) end
 
 for _, item in ipairs(articles) do
-  print(item)
+  for k, val in pairs(item:data_get()) do print(k, val) end
 end
 ```
 
@@ -54,7 +55,7 @@ Entity operations return `(value, err)`. Check `err` before using
 the value:
 
 ```lua
-local articles, err = client:Article():list()
+local articles, err = client:Article():list({ slug = {} })
 if err then error(err) end
 ```
 
@@ -112,8 +113,8 @@ Create a mock client for unit testing — no server required:
 ```lua
 local client = sdk.test()
 
-local result, err = client:Article():list()
--- result is the returned data; err is set on failure
+local result, err = client:Article():list({ slug = {} })
+-- result is an array of entities, one per mock record; err is set on failure
 ```
 
 ### Use a custom fetch function
@@ -200,7 +201,7 @@ All entities share the same interface.
 
 | Method | Signature | Description |
 | --- | --- | --- |
-| `list` | `(reqmatch, ctrl) -> any, err` | List entities matching the criteria. |
+| `list` | `(reqmatch, ctrl) -> any, err` | List entities matching the criteria, one per record. |
 | `data_get` | `() -> table` | Get entity data. |
 | `data_set` | `(data)` | Set entity data. |
 | `match_get` | `() -> table` | Get entity match criteria. |
@@ -210,18 +211,18 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return `(value, err)`. The `value` is the operation's
-data **directly** — there is no wrapper:
+Entity operations return `(value, err)`. The `value` is the entity
+itself — there is no wrapper:
 
 | Operation | `value` |
 | --- | --- |
-| `list` | an array (`table`) of entity records |
+| `list` | an array (`table`) of entities, one per record |
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local article, err = client:Article():list()
+    local article, err = client:Article():list({ slug = {} })
     if err then error(err) end
-    -- article is the record list
+    -- article is an array of entities, one per record
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -287,7 +288,7 @@ Create an instance: `local article = client:Article(nil)`
 #### Example: List
 
 ```lua
-local articles, err = client:Article():list()
+local articles, err = client:Article():list({ slug = {} })
 ```
 
 
@@ -479,7 +480,7 @@ stores the returned data and match criteria internally.
 
 ```lua
 local article = client:Article()
-article:list()
+article:list({ slug = {} })
 
 -- article:data_get() now returns the article data from the last list
 -- article:match_get() returns the last match criteria

@@ -79,6 +79,7 @@ module NovayaGazetaConfig
           },
           "optspec" => {
             "clearTimer" => "`$FUNCTION`",
+            "now" => "`$FUNCTION`",
             "setTimer" => "`$FUNCTION`",
           },
           "strict" => false,
@@ -184,14 +185,18 @@ module NovayaGazetaConfig
                         "type" => "`$ARRAY`",
                         "kind" => "query",
                         "reqd" => true,
+                        "field" => true,
                       },
                     ],
                   },
                   "select" => {
                     "exist" => [
-                      "eu",
                       "slug",
                     ],
+                  },
+                  "response" => {
+                    "kind" => "json",
+                    "media" => "application/json",
                   },
                 },
               ],
@@ -261,6 +266,10 @@ module NovayaGazetaConfig
                   },
                   "args" => {},
                   "select" => {},
+                  "response" => {
+                    "kind" => "json",
+                    "media" => "application/json",
+                  },
                 },
               ],
             },
